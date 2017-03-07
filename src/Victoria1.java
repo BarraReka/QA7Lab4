@@ -1,3 +1,5 @@
+import lab5.oop.exceptions.SkeletonJava;
+
 /**
  * @author flo
  * @since 28/02/2017.

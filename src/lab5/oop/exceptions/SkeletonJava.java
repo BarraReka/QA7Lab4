@@ -1,3 +1,5 @@
+package lab5.oop.exceptions;
+
 import javax.swing.*;
 import java.util.Scanner;
 
