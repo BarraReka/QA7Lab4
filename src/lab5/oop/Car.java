@@ -34,5 +34,9 @@ public class Car extends Vehicle {
 
         Car tanc = new Car();
         tanc.stops();
+
+        Movable m = new Car();
+        m.moves();
+        m.getPosition();
     }
 }
