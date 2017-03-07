@@ -23,7 +23,7 @@ public abstract class Vehicle implements Movable  {
 
 
     public static void main(String[] args) {
-        Car dacia = new Car();
+        Car dacia = new Car("daciapapuc");
 
         dacia.moves();
     }

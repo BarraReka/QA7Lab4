@@ -10,6 +10,10 @@ public class Car extends Vehicle {
     private int speed = 0;
     private String name;
 
+    public Car(String name) {
+        this.name = name;
+    }
+
     @Override
     public void moves() {
         System.out.println("Car moves with speed " + speed);
@@ -26,17 +30,50 @@ public class Car extends Vehicle {
         speed++;
     }
 
+    @Override
+    public String toString() {
+        return "this is " + name + super.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Car car = (Car) o;
+
+        if (speed != car.speed) return false;
+//        if(name != null) {
+//            return name.equals(car.name);
+//        } else {
+//            return car.name == null;
+//        }
+        return name != null ? name.equals(car.name) : car.name == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = speed;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
+    }
+
     public static void main(String[] args) {
-        Car dacia = new Car();
+        Car dacia = new Car("dacia1300");
         dacia.moves();
         dacia.accelerate();
         dacia.stops();
 
-        Car tanc = new Car();
-        tanc.stops();
+        System.out.println(dacia.toString());
 
-        Movable m = new Car();
-        m.moves();
-        m.getPosition();
+        Car aro = new Car("aro10");
+        System.out.println(aro.toString());
+//
+//        Car tanc = new Car();
+//        tanc.stops();
+//
+//        Movable m = new Car();
+//        m.moves();
+//        m.getPosition();
     }
 }
