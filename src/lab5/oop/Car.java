@@ -68,12 +68,19 @@ public class Car extends Vehicle {
 
         Car aro = new Car("aro10");
         System.out.println(aro.toString());
-//
-//        Car tanc = new Car();
-//        tanc.stops();
-//
-//        Movable m = new Car();
-//        m.moves();
-//        m.getPosition();
+
+        Car tanc = new Car("td103");
+        tanc.stops();
+        tanc.accelerate();
+
+        Vehicle m = new Car("skodafabia");
+        m.moves();
+        m.getPosition();
+
+        Movable v = m;
+        v.moves();
+
+        Object o = m;
+
     }
 }
